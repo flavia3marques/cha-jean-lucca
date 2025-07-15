@@ -1,0 +1,54 @@
+
+body {
+  font-family: sans-serif;
+  background: #f0f4ff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+main.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.item p {
+  margin: 0.5rem 0;
+}
+
+button {
+  background: #0074D9;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
