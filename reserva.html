@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva</title>
+  <style>
+    body { font-family: sans-serif; padding: 30px; background: #eef2f8; }
+    form {
+      background: white; padding: 20px; border-radius: 10px;
+      max-width: 400px; margin: auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%; padding: 10px; margin-top: 10px; font-size: 1em;
+    }
+    button {
+      background: #0077cc; color: white; border: none; border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <form id="formReserva">
+    <h2>Reservar Presente</h2>
+    <input type="text" id="nome" placeholder="Seu nome completo" required>
+    <input type="tel" id="telefone" placeholder="Seu telefone (WhatsApp)" required>
+    <button type="submit">Confirmar Reserva</button>
+  </form>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemId = urlParams.get('item');
+    document.getElementById('formReserva').onsubmit = function(e) {
+      e.preventDefault();
+      const key = 'item_' + itemId;
+      const qty = localStorage.getItem(key) || 0;
+      localStorage.setItem(key, parseInt(qty) + 1);
+      alert('Reserva confirmada! Obrigado 💙');
+      window.location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>
