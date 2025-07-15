@@ -45,7 +45,7 @@ const presentes = [
   "Meias + luvas"
 ];
 
-const lista = document.getElementById('lista-presentes');
+const lista = document.getElementById("lista-presentes");
 const contador = {};
 
 presentes.forEach((item, index) => {
