@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reserva</title>
+  <title>Reserva de Presente</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #f3f6fc;
+      background: #f2f4f8;
       padding: 30px;
     }
     form {
@@ -16,7 +16,7 @@
       max-width: 400px;
       margin: auto;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
     input, button {
       width: 100%;
@@ -50,7 +50,7 @@
       const nome = document.getElementById('nome').value;
       const telefone = document.getElementById('telefone').value;
 
-      fetch('SEU_LINK_DO_WEBAPP', {
+      fetch('https://script.google.com/macros/s/AKfycbyr69bCNIWEqQg8AoRnMLGsJMeGaUMlNw6clkF01lj1QVKiy-R29Vq5wy0XRsYdVuYW/exec', {
         method: 'POST',
         body: JSON.stringify({
           item: itemId,
