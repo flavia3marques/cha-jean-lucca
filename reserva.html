@@ -49,13 +49,15 @@
       const nome = document.getElementById('nome').value;
       const telefone = document.getElementById('telefone').value;
 
-      fetch('https://script.google.com/macros/s/AKfycbwHu2qKXP1jPpL9hym7oh_LQtJ7NjYpR2Om8jKqqu5ZHoYKwDg4G1lFv-RCSUBUUZHE/exec', {
-        method: 'POST',
-        body: JSON.stringify({
-          item: itemId,
-          nome: nome,
-          telefone: telefone
-        }),
+   fetch('https://script.google.com/macros/s/NOVO_ID/exec', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    item: itemId,
+    nome: nome,
+    telefone: telefone
+  })
+}),
         headers: {
           'Content-Type': 'application/json'
         }
