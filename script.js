@@ -1,4 +1,3 @@
-
 const presentes = [
   "Fralda RN + Pacote algodão bolinha",
   "Fralda RN + Sabonete neutro",
@@ -32,11 +31,11 @@ const presentes = [
   "Fralda G + Lenço umedecido",
   "Trocador portátil",
   "Livros para bebês",
-  "Babá eletrônica",
+  "Babá eletrônica.",
   "Almofada de amamentação",
   "Pares de luva + paninhos de boca",
   "Macacão + Gorro",
-  "Manta Leve",
+  "Manta Leves",
   "Burigotto Kit Banho Branco",
   "Bomba tira leite",
   "Body + Calça",
@@ -45,10 +44,10 @@ const presentes = [
   "Meias + luvas"
 ];
 
-const lista = document.getElementById("lista-presentes");
+const lista = document.getElementById('lista-presentes');
 const contador = {};
 
-presentes.forEach((item, index) => {
+presentes.forEach((item) => {
   const nomeItem = item.trim();
   contador[nomeItem] = (contador[nomeItem] || 0) + 1;
 });
@@ -65,7 +64,8 @@ presentes.forEach((item, index) => {
 
   div.innerHTML = `
     <h3>${item}</h3>
-    <p>Quantidade disponível: ${qtd}</p>
+    <p>Preciso de: ${qtd}</p>
+    <p><strong>Faltam: ${qtd}</strong></p>
     <button onclick="reservar(${index})">Vou levar</button>
   `;
   lista.appendChild(div);
