@@ -1,54 +1,58 @@
-
 body {
-  font-family: sans-serif;
-  background: #f0f4ff;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8ff;
   margin: 0;
   padding: 0;
 }
-
 header {
-  background: #001f3f;
+  background-color: #001f4d;
   color: white;
   text-align: center;
-  padding: 1.5rem 1rem;
-}
-
-main.grade {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
-}
-
-.item {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   padding: 1rem;
+}
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+button {
+  background-color: #001f4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
 }
-
-.item h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+input[type="text"],
+input[type="tel"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
-
-.item p {
-  margin: 0.5rem 0;
-}
-
-button {
-  background: #0074D9;
+input[type="submit"] {
+  background-color: #001f4d;
   color: white;
   border: none;
   padding: 0.5rem;
-  border-radius: 5px;
   cursor: pointer;
 }
-
-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+.mensagem {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
 }
